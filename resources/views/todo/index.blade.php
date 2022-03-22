@@ -34,8 +34,14 @@
                         <th scope="row">{{ $todos->firstItem() + $key }}</th>
                         <td>{{$todo->name}}</td>
                         <td>{{$todo->status}}</td>
-                        <td>
+                        <td align="center">
                             <button class="btn btn-primary">Selesai</button>
+                            <form action="todos/{{$todo->id}}" method="post">
+                                @csrf @method('DELETE')
+                                <button type="submit" class="btn btn-danger">
+                                    Hapus
+                                </button>
+                            </form>
                         </td>
                     </tr>
                     @empty
