@@ -29,9 +29,9 @@
                         </td>
                     </tr>
                     @endforeach -->
-                    @forelse ($todos as $todo)
+                    @forelse ($todos as $key => $todo)
                     <tr>
-                        <th scope="row">{{ $loop->iteration }}</th>
+                        <th scope="row">{{ $todos->firstItem() + $key }}</th>
                         <td>{{$todo->name}}</td>
                         <td>{{$todo->status}}</td>
                         <td>
