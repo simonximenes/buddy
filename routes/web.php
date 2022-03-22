@@ -27,4 +27,5 @@ Route::get('/backend', [TestController::class, 'backend']);
 Route::get('/trainer', [TestController::class, 'cubaan']);
 Route::get('/welcome', [TestController::class, 'welcome']);
 Route::get('/dashboard', [TestController::class, 'dashboard']);
-Route::get('/todos', [TodoController::class, 'index']);
+// Route::get('/todos', [TodoController::class, 'index']);
+Route::resource('todos', TodoController::class);
