@@ -1,5 +1,6 @@
 @extends('layouts.backend') @section('header_script') @endsection
-@section('mainTitle') Senarai Semak Perkara @endsection @section('topButton')
+@section('mainTitle') Senarai Semak Perkara {{ $name }}@endsection
+@section('topButton')
 <a href="/staff" class="btn btn-link btn-float has-text">
     <i class="fa fa-plus" aria-hidden="true"></i>
     <span>Tambah Senarai Baru</span>
@@ -18,24 +19,33 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- @foreach ($todos as $todo)
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Makan</td>
-                        <td>Belum Selesai</td>
+                        <th scope="row">{{ $loop->iteration }}</th>
+                        <td>{{$todo->name}}</td>
+                        <td>{{$todo->status}}</td>
                         <td>
                             <button class="btn btn-primary">Selesai</button>
                         </td>
                     </tr>
+                    @endforeach -->
+                    @forelse ($todos as $todo)
                     <tr>
-                        <th scope="row">2</th>
-                        <td>Makan</td>
-                        <td>Belum Selesai</td>
+                        <th scope="row">{{ $loop->iteration }}</th>
+                        <td>{{$todo->name}}</td>
+                        <td>{{$todo->status}}</td>
                         <td>
                             <button class="btn btn-primary">Selesai</button>
                         </td>
                     </tr>
+                    @empty
+                    <tr>
+                        <td colspan="3">No Data Yet</td>
+                    </tr>
+                    @endforelse
                 </tbody>
             </table>
+            {{ $todos->links() }}
         </div>
     </div>
 

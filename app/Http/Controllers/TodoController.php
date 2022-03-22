@@ -15,7 +15,10 @@ class TodoController extends Controller
     public function index()
     {
         //
-        return view('todo.index');
+        return view('todo.index',[
+            'todos' => Todo::paginate(10),
+            'name' => 'Simon Anak Malinah',
+        ]);
     }
 
     /**
