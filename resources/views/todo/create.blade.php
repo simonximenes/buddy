@@ -1,8 +1,8 @@
 @extends('layouts.backend') @section('header_script') @endsection
 @section('mainTitle') Tambah Perkara Baru @endsection @section('topButton')
 <a href="/todos" class="btn btn-link btn-float has-text">
-    <i class="fa fa-reply" aria-hidden="true"></i>
-    <span>Senarai</span>
+    <i class="fa fa-list" aria-hidden="true"></i>
+    <span>Senarai Semak</span>
 </a>
 @endsection @section('content')
 <div class="container">

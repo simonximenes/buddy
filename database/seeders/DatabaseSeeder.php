@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
         //     TodoSeeder::class,
         // ]);
         //seeder yang besar-besaran
-        Todo::factory(1000)->create();
+        Todo::factory(100)->create();
 
     }
 }
