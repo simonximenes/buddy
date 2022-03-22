@@ -1,5 +1,5 @@
 @extends('layouts.backend') @section('header_script') @endsection
-@section('mainTitle') Tambah Perkara Baru @endsection @section('topButton')
+@section('mainTitle') Tambah Item Baru @endsection @section('topButton')
 <a href="/todos" class="btn btn-link btn-float has-text">
     <i class="fa fa-list" aria-hidden="true"></i>
     <span>Senarai Semak</span>
@@ -11,7 +11,7 @@
             <form action="/todos" method="post">
                 @csrf
                 <fieldset>
-                    <legend>Sila Isikan Borang Ini</legend>
+                    <legend>Sila isikan borang ini dengan lengkap.</legend>
                     <div class="form-group">
                         <label for="name">Nama</label>
                         <input
@@ -19,15 +19,15 @@
                             name="name"
                             class="form-control"
                             id="name"
-                            placeholder="Nama Perkara"
+                            placeholder="Sila Masukkan Nama Item..."
                         />
                         <small id="nameHelp" class="form-text text-muted"
-                            >Sila Masukkan Nama Perkara</small
+                            >Contoh : MyMiE Kecik</small
                         >
                     </div>
 
                     <button type="submit" class="btn btn-primary">
-                        Hantar
+                        Simpan
                     </button>
                 </fieldset>
             </form>

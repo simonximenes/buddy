@@ -1,9 +1,8 @@
 @extends('layouts.backend') @section('header_script') @endsection
-@section('mainTitle') Senarai Semak Perkara {{ $name }}@endsection
-@section('topButton')
+@section('mainTitle') Senarai Semak {{ $name }}@endsection @section('topButton')
 <a href="/todos/create" class="btn btn-link btn-float has-text">
     <i class="fa fa-plus" aria-hidden="true"></i>
-    <span>Tambah Perkara Baru</span>
+    <span>Tambah Item Baru</span>
 </a>
 @endsection @section('content')
 <div class="container">
@@ -15,7 +14,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Item</th>
                         <th scope="col">Status</th>
-                        <th scope="col">Tindakan</th>
+                        <th scope="col" style="text-align: center" colspan="8">Tindakan</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,14 +33,32 @@
                         <th scope="row">{{ $todos->firstItem() + $key }}</th>
                         <td>{{$todo->name}}</td>
                         <td>{{$todo->status}}</td>
-                        <td align="center">
-                            <button class="btn btn-primary">Selesai</button>
-                            <form action="todos/{{$todo->id}}" method="post">
-                                @csrf @method('DELETE')
-                                <button type="submit" class="btn btn-danger">
-                                    Hapus
-                                </button>
-                            </form>
+                        <td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                                <td>
+                                    <button class="btn btn-primary">
+                                        Selesai
+                                    </button>
+                                </td>
+                                <td>
+                                    <form
+                                        action="todos/{{$todo->id}}"
+                                        method="post"
+                                    >
+                                        @csrf @method('DELETE')
+                                        <button
+                                            type="submit"
+                                            class="btn btn-danger"
+                                        >
+                                            Hapus
+                                        </button>
+                                    </form>
+                                </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </td>
                     </tr>
                     @empty

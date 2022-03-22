@@ -29,7 +29,8 @@
     <hr class="sidebar-divider" />
 
     <!-- Heading -->
-    <div class="sidebar-heading">Antara Muka</div>
+    <!-- <div class="sidebar-heading">Antara Muka</div> -->
+    <div class="sidebar-heading">Tugasan</div>
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
@@ -41,8 +42,8 @@
             aria-expanded="true"
             aria-controls="collapseTwo"
         >
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Komponen</span>
+            <i class="fa fa-list" aria-hidden="true"></i>
+            <span>Senarai Semak</span>
         </a>
         <div
             id="collapseTwo"
@@ -51,9 +52,9 @@
             data-parent="#accordionSidebar"
         >
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Komponen Tersuai:</h6>
-                <a class="collapse-item" href="buttons.html">Butang</a>
-                <a class="collapse-item" href="cards.html">Kad</a>
+                <h6 class="collapse-header">Perkara:</h6>
+                <a class="collapse-item" href="/todos">Senarai Semak</a>
+                <a class="collapse-item" href="/todos/create">Tambah Item</a>
             </div>
         </div>
     </li>
@@ -136,8 +137,8 @@
     <!-- Nav Item - Charts -->
     <li class="nav-item">
         <a class="nav-link" href="/todos">
-            <i class="fa fa-list" aria-hidden="true"></i>
-            <span>Senarai Semak Perkara</span></a
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Tetapan Lain</span></a
         >
     </li>
 
