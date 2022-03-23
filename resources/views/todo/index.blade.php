@@ -8,13 +8,18 @@
 <div class="container">
     <div class="card">
         <div class="card-body">
+            @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+            @endif
             <table class="table table-dark table-striped">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Item</th>
                         <th scope="col">Status</th>
-                        <th scope="col" style="text-align: center" colspan="8">Tindakan</th>
+                        <th scope="col" style="text-align: center" colspan="9">Tindakan</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -37,6 +42,9 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td>
+                                <a href="/todos/{{$todo->id}}/edit" class="btn btn-warning">Kemaskini</a>
+                            </td>
                                 <td>
                                     <button class="btn btn-primary">
                                         Selesai

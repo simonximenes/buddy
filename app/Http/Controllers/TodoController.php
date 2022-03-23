@@ -46,7 +46,7 @@ class TodoController extends Controller
         $todo->name = $request->name;
         $todo->save();
 
-        return redirect('/todos');
+        return redirect('/todos')->with('status', 'Item Baru ( '. $request->name .' ) Telah Ditambah');
     }
 
     /**
@@ -69,6 +69,9 @@ class TodoController extends Controller
     public function edit(Todo $todo)
     {
         //
+        return view('todo.edit',[
+            'todo' => $todo,
+        ]);
     }
 
     /**
@@ -80,7 +83,12 @@ class TodoController extends Controller
      */
     public function update(Request $request, Todo $todo)
     {
-        //
+        //dd($request->all(), $todo)
+        $todo->name = $request->name;
+        $todo->save();
+
+        return redirect('/todos')->with('status', 'Item ( '. $request->name .' ) Telah Dikemaskini');
+
     }
 
     /**
@@ -94,6 +102,6 @@ class TodoController extends Controller
         //
         $todo->delete();
 
-        return redirect('/todos');
+        return redirect('/todos')->with('status', 'Item ( '. $todo->name .' ) Telah Dihapus');
     }
 }
