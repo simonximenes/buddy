@@ -34,8 +34,6 @@
                         <td>{{$staff->phone}}</td>
                         <td>
                             <td></td>
-                            <td></td>
-                            <td></td>
                             <td>
                                 <a href="/staffs/{{$staff->id}}" class="btn btn-info">Lihat</a>
                             </td>
@@ -56,8 +54,6 @@
                                         </button>
                                     </form>
                                 </td>
-                            <td></td>
-                            <td></td>
                             <td></td>
                         </td>
                     </tr>
