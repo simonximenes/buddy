@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Staff;
 use App\Models\Todo;
 use Database\Factories\TodoFactory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -22,7 +23,8 @@ class DatabaseSeeder extends Seeder
         //     TodoSeeder::class,
         // ]);
         //seeder yang besar-besaran
-        Todo::factory(100)->create();
+        Todo::factory(10)->create();
+        Staff::factory(10)->create();
 
     }
 }

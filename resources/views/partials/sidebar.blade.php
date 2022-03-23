@@ -59,6 +59,35 @@
         </div>
     </li>
 
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a
+            class="nav-link collapsed"
+            href="#"
+            data-toggle="collapse"
+            data-target="#collapseStaff"
+            aria-expanded="true"
+            aria-controls="collapseStaff"
+        >
+            <i class="fa fa-address-card" aria-hidden="true"></i>
+            <span>Senarai Kakitangan</span>
+        </a>
+        <div
+            id="collapseStaff"
+            class="collapse"
+            aria-labelledby="headingStaff"
+            data-parent="#accordionSidebar"
+        >
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Perkara:</h6>
+                <a class="collapse-item" href="/staffs">Senarai Kakitangan</a>
+                <a class="collapse-item" href="/staffs/create"
+                    >Tambah Kakitangan</a
+                >
+            </div>
+        </div>
+    </li>
+
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a
