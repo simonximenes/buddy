@@ -18,18 +18,39 @@
             <div>
                 <h1 class="display-3">{{ $staff->name }}</h1>
                 <p class="lead">
-                    Alamat : <b>{{ $staff->address }}</b>
+                    <font color="green"
+                        ><i class="fa fa-address-card" aria-hidden="true"></i
+                    ></font>
+                    Alamat :
+                    <b>{{ $staff->address }}</b>
                 </p>
                 <p class="lead">
-                    Emel : <b>{{ $staff->email }}</b>
+                    <font color="red"
+                        ><i class="fa fa-envelope" aria-hidden="true"></i
+                    ></font>
+                    Emel :
+                    <b>{{ $staff->email }}</b>
                 </p>
                 <p class="lead">
-                    Telefon : <b>{{ $staff->phone }}</b>
+                    <font color="blue"
+                        ><i class="fa fa-phone" aria-hidden="true"></i
+                    ></font>
+                    Telefon :
+                    <b>{{ $staff->phone }}</b>
                 </p>
                 <hr class="my-4" />
                 <p>
                     Tarikh Terakhir Maklumat Dikemaskini :
-                    {{ \Carbon\Carbon::parse($staff->updated_at)->format('d M, Y') }}
+                    <b
+                        ><font
+                            color="red"
+                            >{{ \Carbon\Carbon::parse($staff->updated_at)->format('d M, Y') }}</font
+                        ></b
+                    >
+                </p>
+                <p>
+                    Tarikh Rekod Dicipta :
+                    {{ \Carbon\Carbon::parse($staff->created_at)->format('d M, Y') }}
                 </p>
                 <p class="lead">
                     <a
