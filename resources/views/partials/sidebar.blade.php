@@ -140,7 +140,7 @@
             aria-controls="collapsePages"
         >
             <i class="fas fa-fw fa-folder"></i>
-            <span>Halaman</span>
+            <span>Belajar Templating</span>
         </a>
         <div
             id="collapsePages"
@@ -156,8 +156,10 @@
                     >Lupa Kata Laluan</a
                 >
                 <div class="collapse-divider"></div>
-                <h6 class="collapse-header">Halaman Lain:</h6>
-                <a class="collapse-item" href="404.html">Halaman 404</a>
+                <h6 class="collapse-header">Halaman Templating:</h6>
+                <a class="collapse-item" href="/master">Halaman Master</a>
+                <a class="collapse-item" href="/child1">Halaman Child 1</a>
+                <a class="collapse-item" href="/child2">Halaman Child 2</a>
                 <a class="collapse-item" href="blank.html">Halaman Kosong</a>
             </div>
         </div>

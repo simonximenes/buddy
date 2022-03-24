@@ -28,6 +28,10 @@ Route::get('/backend', [TestController::class, 'backend']);
 Route::get('/trainer', [TestController::class, 'cubaan']);
 Route::get('/welcome', [TestController::class, 'welcome']);
 Route::get('/dashboard', [TestController::class, 'dashboard']);
+Route::get('/master', [TestController::class, 'master']);
+Route::get('/child1', [TestController::class, 'child']);
+Route::get('/child2', [TestController::class, 'child2']);
+
 // Route::get('/todos', [TodoController::class, 'index']);
 Route::resource('todos', TodoController::class);
 Route::resource('staffs', StaffController::class);

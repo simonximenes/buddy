@@ -26,4 +26,19 @@ class TestController extends Controller
     {
         return view('dashboard');
     }
+
+    public function master ()
+    {
+        return view('layouts.app');
+    }
+
+    public function child ()
+    {
+        return view('child');
+    }
+
+    public function child2 ()
+    {
+        return view('child2');
+    }
 }
