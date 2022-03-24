@@ -15,8 +15,10 @@ class StaffController extends Controller
     public function index()
     {
         //
+        $user = auth()->user();
+
         return view('staff.index',[
-            'staffs' => Staff::paginate(10),
+            'staffs' => $user->staffs()->paginate(10),
         ]);
     }
 
@@ -46,13 +48,15 @@ class StaffController extends Controller
             'email' => 'required|email|unique:users,email',
             'phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
         ]);
+
+        $user = auth()->user();
         // dd($request->all());
         $staff = new Staff();
         $staff->name = $validated['name'];
         $staff->address = $validated['address'];
         $staff->email = $validated['email'];
         $staff->phone = $validated['phone'];
-        $staff->save();
+        $user->staffs()->save($staff);
 
         return redirect('/staffs')->with('status', 'Kakitangan Baru ( '. $validated['name'] .' ) Telah Ditambah');
     }
