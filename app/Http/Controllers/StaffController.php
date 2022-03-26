@@ -70,6 +70,9 @@ class StaffController extends Controller
     public function show(Staff $staff)
     {
         //
+        $this->authorize('view', $staff);
+
+
         return view('staff.show',[
             'staff' => $staff,
         ]);
@@ -84,6 +87,9 @@ class StaffController extends Controller
     public function edit(Staff $staff)
     {
         //
+        $this->authorize('view', $staff);
+
+
         return view('staff.edit',[
             'staff' => $staff,
         ]);
@@ -99,6 +105,8 @@ class StaffController extends Controller
     public function update(Request $request, Staff $staff)
     {
         //
+        $this->authorize('view', $staff);
+
         $validated = $request->validate([
             'name' => 'required|string|min:2',
             'address' => 'required|string',
@@ -124,6 +132,9 @@ class StaffController extends Controller
     public function destroy(Staff $staff)
     {
         //
+        $this->authorize('view', $staff);
+
+
         $staff->delete();
 
         return redirect('/staffs')->with('status', 'Maklumat Kakitangan ( '. $staff->name .' ) Telah Dihapus');
